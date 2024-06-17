@@ -1094,6 +1094,69 @@
     overflow: visible;
 }
 
+
+/* Guaranteed Pathway to Begin Your Career start */
+
+.course-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: "Epilogue-Regular", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    height: auto;
+}
+
+.course-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.course-card .card-title {
+    color: #121212;
+    text-align: left;
+    font-family: "Epilogue-SemiBold", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.course-card .course-card .btn {
+    margin-top: 15px;
+}
+
+.online-course-with-guaranteed-placement {
+    color: #553800;
+    text-align: left;
+    font-family: "Epilogue-Regular", sans-serif;
+    font-size: 12px;
+    line-height: 115%;
+    font-weight: 400;
+    position: relative;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+.frame-918 {
+    background: linear-gradient( 90.01deg, rgba(255, 168, 0, 1) 0%, rgba(255, 255, 255, 1) 78.07488441467285%);
+    border-radius: 4px;
+    padding: 5px 10px 5px 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 20px;
+    top: 190px;
+}
+
+
+/* footer */
+
 .footer {
     background-color: #0033e6;
     color: white;
