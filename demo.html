@@ -4,18 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css" rel="stylesheet">
-    <title>Responsive Text</title>
+    <title>Bootstrap Text on Image</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .text-overlay {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="fs-1 fs-md-2 fs-lg-3">Responsive Text Size 1 on small screens, size 2 on medium, size 3 on large</h1>
-        <p class="fs-4 fs-md-5 fs-lg-6">This paragraph has responsive text sizes at different breakpoints.</p>
+    <div class="container mt-5">
+        <div class="position-relative">
+            <img src="Banner.png" class="img-fluid" alt="Responsive image">
+            <div class="position-absolute text-overlay">
+                <h1>Your Text Here</h1>
+                <p>Additional text can go here.</p>
+            </div>
+        </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

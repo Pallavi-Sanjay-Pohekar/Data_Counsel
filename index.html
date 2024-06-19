@@ -62,25 +62,25 @@
     </nav>
 
     <img class="img-responsive" src="Banner.png" alt="main" width="100%">
-    <div class="main1">
-        <div class="achieve">Achieve</div><br>
-        <div class="java-span3">
-            Your Summer <br> Training Certificate
-        </div>
-        <div class="frame-881">
-            <div class="get-55-10-off-on-all-online-trainings">
-                <span>
+
+    <div class="achieve">Achieve</div><br>
+    <div class="java-span3">
+        Your Summer <br> Training Certificate
+    </div>
+    <div class="frame-881">
+        <div class="get-55-10-off-on-all-online-trainings">
+            <span>
             <span class="get-55-10-off-on-all-online-trainings-span">Get</span>
-                <span class="get-55-10-off-on-all-online-trainings-span2">
+            <span class="get-55-10-off-on-all-online-trainings-span2">
                 55% + 10% OFF
             </span>
-                <span class="get-55-10-off-on-all-online-trainings-span3">
+            <span class="get-55-10-off-on-all-online-trainings-span3">
                 on all online trainings
             </span>
-                </span>
-            </div>
+            </span>
         </div>
     </div>
+
     <div class="frame-887">
         <svg class="vector-8" width="244" height="44" viewBox="0 0 244 44" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -123,7 +123,7 @@
             <div class="_1-d-13-h-12-m-05-s">1d: 13h 12m: 05s</div>
         </div>
     </div>
-
+    </div>
     <div class="container mt-4">
         <div class="row">
             <div class="col-12 col-md-4">
@@ -381,118 +381,299 @@
 
     <!-- Guaranteed Pathway to Begin Your Career end -->
 
-    <!-- counter start -->
-
-    <div class="container py-5">
-        <div class="row text-center">
-            <div class="inspiring-your-aspirations text-left">Inspiring Your Aspirations</div>
-            <div class="real-success-requires-the-right-skillset-through-our-online-courses-you-too-can-give-wings-to-your-dreams text-left">
-                Real success requires the right skillset. Through our online courses, you too can give wings to your dreams.
-            </div>
-            <div class="col-md-3 col-sm-6 counter">
-                <h2 class="count" data-target="600000">0</h2>
-                <p>Learner</p>
-            </div>
-            <div class="col-md-3 col-sm-6 counter">
-                <h2 class="count" data-target="200000000">0</h2>
-                <p>Learner Minute</p>
-            </div>
-            <div class="col-md-3 col-sm-6 counter">
-                <h2>4.7/5</h2>
-                <p>Average Rating</p>
-            </div>
-            <div class="col-md-3 col-sm-6 counter">
-                <h2 class="count" data-target="1500000">0</h2>
-                <p>Placement</p>
+    <!-- Inspiration your aspirations -->
+    <section class="testimonials py-5">
+        <div class="container py-5" style="background-color: white; border-radius: 10px; padding: 50px;">
+            <div class="row text-center">
+                <div class="inspiring-your-aspirations text-left">Inspiring Your Aspirations</div>
+                <div class="real-success-requires-the-right-skillset-through-our-online-courses-you-too-can-give-wings-to-your-dreams text-left">
+                    Real success requires the right skillset. Through our online courses, you too can give wings to your dreams.
+                </div>
+                <div class="col-md-3 col-sm-6 counter">
+                    <h2 class="count" data-target="600000">0</h2>
+                    <p>Learner</p>
+                </div>
+                <div class="col-md-3 col-sm-6 counter">
+                    <h2 class="count" data-target="200000000">0</h2>
+                    <p>Learner Minute</p>
+                </div>
+                <div class="col-md-3 col-sm-6 counter">
+                    <h2>4.7/5</h2>
+                    <p>Average Rating</p>
+                </div>
+                <div class="col-md-3 col-sm-6 counter">
+                    <h2 class="count" data-target="1500000">0</h2>
+                    <p>Placement</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const counters = document.querySelectorAll('.count');
-            const speed = 100; // The lower the slower
+        <script>
+            var multipleCardCarousel = document.querySelector("#carouselExampleControls");
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                    interval: false,
+                });
+                var carouselWidth = document.querySelector(".carousel-inner").scrollWidth;
+                var cardWidth = document.querySelector(".carousel-item").offsetWidth;
+                var scrollPosition = 0;
 
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = +counter.getAttribute('data-target');
-                    const count = +counter.innerText;
-
-                    // Lower increment to slow and higher to slow
-                    const increment = target / speed;
-
-                    // Check if target is reached
-                    if (count < target) {
-                        // Add increment to count and output in counter
-                        counter.innerText = Math.ceil(count + increment);
-                        // Call function every ms
-                        setTimeout(updateCount, 1);
-                    } else {
-                        counter.innerText = target;
+                document.querySelector("#carouselExampleControls .carousel-control-next").addEventListener("click", function() {
+                    if (scrollPosition < carouselWidth - cardWidth * 4) {
+                        scrollPosition += cardWidth;
+                        document.querySelector("#carouselExampleControls .carousel-inner").scrollLeft = scrollPosition;
                     }
-                };
+                });
 
-                updateCount();
-            });
-        });
-    </script>
-    </div>
-    <!-- counter end -->
-
-    <!-- Footer -->
-    <footer class="footer text-center text-md-start">
+                document.querySelector("#carouselExampleControls .carousel-control-prev").addEventListener("click", function() {
+                    if (scrollPosition > 0) {
+                        scrollPosition -= cardWidth;
+                        document.querySelector("#carouselExampleControls .carousel-inner").scrollLeft = scrollPosition;
+                    }
+                });
+            } else {
+                multipleCardCarousel.classList.add("slide");
+            }
+        </script>
+        </div>
         <div class="container">
+            <div class="text-center mb-4">
+                <h2>Our students, making us proud everyday! <span>❤️</span></h2>
+                <p>Let our success stories do the talking</p>
+            </div>
             <div class="row">
-                <div class="col-md-3 mb-3">
-                    <h5 class="mb-3">Data Council</h5>
-                    <p>We Believe in Practical Training and work experience</p>
-                    <div class="social-icons">
-                        <div class="col-md-3 mb-3 connections"></div>
-                        <h5 class="mb-3">Connection</h5>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-twitter"></i></a>
-                        <a href="#"><i class="bi bi-youtube"></i></a>
+                <div class="col-md-6">
+                    <div class="testimonial-card p-4">
+                        <div class="d-flex align-items-center">
+
+                            <div>
+                                <p>"I developed an interest in HR Management and came across Data Council Trainings, the courses were affordable with great content. The best part was that they provided me with a lot of practical projects to work on, which
+                                    landed me my first internship! I'll be forever grateful to Data Council"</p>
+                                <div class="rating">
+                                    <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                                </div>
+                                <h5 class="mt-2">Adarsh Raj</h5>
+                                <p>Anjuman College of Engineering & Technology</p>
+                            </div>
+                            <img src="rectangle-80.png" alt="Student Image" class="img-fluid rounded-circle mr-3" style="width: 80px;">
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-2 mb-3">
-                    <h5 class="mb-3">Institute</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Trainers</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <h5 class="mb-3">Our Offices</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Pune-India</a></li>
-                        <li><a href="#">Singapore</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 mb-3">
-                    <h5 class="mb-3">InternMeets</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Our Service</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <h5 class="mb-3">Subscribe Newsletter</h5>
-                    <form class="newsletter d-flex">
-                        <input type="email" class="form-control" placeholder="Your Email address">
-                        <button class="btn btn-primary" type="submit">Join</button>
-                    </form>
-                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card p-4">
+                        <div class="d-flex align-items-center">
 
+                            <div>
+                                <p>"I developed an interest in HR Management and came across Data Council Trainings, the courses were affordable with great content. The best part was that they provided me with a lot of practical projects to work on, which
+                                    landed me my first internship! I'll be forever grateful to Data Council"</p>
+                                <div class="rating">
+                                    <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                                </div>
+                                <h5 class="mt-2">Adarsh Raj</h5>
+                                <p>Anjuman College of Engineering & Technology</p>
+                            </div>
+                            <img src="rectangle-81.png" alt="Student Image" class="img-fluid rounded-circle mr-3" style="width: 80px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary" id="prev">←</button>
+                <button class="btn btn-primary" id="next">→</button>
             </div>
         </div>
+        <div class="container">
+            <div class="text-left my-4">
+                <h1>The Data Council Trainings Advantage</h1>
+                <p>100% online courses led in a dynamic learning environment</p>
+            </div>
+            <div class="row advantages">
+                <div class="col-md-4 advantage-item p-0 m-0">
+                    <img src="magic-book0.png" alt="Industry grade content">
+                    <h5>Industry grade content</h5>
+                    <p>With practical learning</p>
+                </div>
+                <div class="col-md-4 advantage-item p-0 m-0">
+                    <img src="handshake0.png" alt="100% Placement Assistance">
+                    <h5>100% Placement Assistance</h5>
+                    <p>To help you launch your career</p>
+                </div>
+                <div class="col-md-4 advantage-item p-0 m-0">
+                    <img src="certificate-of-honor0.png" alt="Excellence Certified">
+                    <h5>Excellence Certified</h5>
+                    <p>And recognized by 180K+ companies</p>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="embed-responsive embed-responsive-16by9 my-auto">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_whe7kKahkk?si=d6sU-Vjs0utQc0js" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Meet your super skills educators -->
+
+    <div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card">
+                    <div class="img-wrapper"> <img src="frame-9472.png" class="card-img-top d-block w-100" alt="Anuj Kalbalia (Ex-IBM)"> </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Anuj Kalbalia (Ex-IBM)</h5>
+                        <p class="card-text">Educator, Web Development<br>Ex-CodeChef, Data Council<br>NIT Durgapur alumnusp</p>
+                        <div class="card-footer">
+                            <small class="text-muted">10 Year Industry Experts</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="frame-9481.png" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Anuj Kalbalia (Ex-IBM)</h5>
+                        <p class="card-text">Educator, Web Development<br>Ex-CodeChef, Data Council<br>NIT Durgapur alumnusp
+                            <p>
+                                <div class="card-footer">
+                                    <small class="text-muted">10 Year Industry Experts</small>
+                                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="frame-9491.png" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Anuj Kalbalia (Ex-IBM)</h5>
+                        <p class="card-text">Educator, Web Development<br>Ex-CodeChef, Data Council<br>NIT Durgapur alumnusp</p>
+                        <div class="card-footer">
+                            <small class="text-muted">10 Year Industry Experts</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="frame-9501.png" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Anuj Kalbalia (Ex-IBM)</h5>
+                        <p class="card-text">Educator, Web Development<br>Ex-CodeChef, Data Council<br>NIT Durgapur alumnusp</p>
+                        <div class="card-footer">
+                            <small class="text-muted">10 Year Industry Experts</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         </div>
 
-        <div class="text-center mt-4">
-            <p>&copy; 2024 All rights reserved | Powered by Data Council</p>
-        </div>
-        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var multipleCardCarousel = document.querySelector(
+                    "#carouselExampleControls"
+                );
+                if (window.matchMedia("(min-width: 768px)").matches) {
+                    var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+                        interval: false,
+                    });
+                    var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+                    var cardWidth = $(".carousel-item").width();
+                    var scrollPosition = 0;
+                    $("#carouselExampleControls .carousel-control-next").on("click", function() {
+                        if (scrollPosition < carouselWidth - cardWidth * 4) {
+                            scrollPosition += cardWidth;
+                            $("#carouselExampleControls .carousel-inner").animate({
+                                    scrollLeft: scrollPosition
+                                },
+                                600
+                            );
+                        }
+                    });
+                    $("#carouselExampleControls .carousel-control-prev").on("click", function() {
+                        if (scrollPosition > 0) {
+                            scrollPosition -= cardWidth;
+                            $("#carouselExampleControls .carousel-inner").animate({
+                                    scrollLeft: scrollPosition
+                                },
+                                600
+                            );
+                        }
+                    });
+                } else {
+                    $(multipleCardCarousel).addClass("slide");
+                }
+            });
+        </script>
+
+        <!-- Footer -->
+        <footer class="footer text-center text-md-start">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <h5 class="mb-3">Data Council</h5>
+                        <p>We Believe in Practical Training and work experience</p>
+                        <div class="social-icons">
+                            <div class="col-md-3 mb-3 connections"></div>
+                            <h5 class="mb-3">Connection</h5>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                            <a href="#"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <h5 class="mb-3">Institute</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Trainers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <h5 class="mb-3">Our Offices</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Pune-India</a></li>
+                            <li><a href="#">Singapore</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <h5 class="mb-3">InternMeets</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Our Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h5 class="mb-3">Subscribe Newsletter</h5>
+                        <form class="newsletter d-flex">
+                            <input type="email" class="form-control" placeholder="Your Email address">
+                            <button class="btn btn-primary" type="submit">Join</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <p>&copy; 2024 All rights reserved | Powered by Data Council</p>
+    </div>
+    </div>
 
     </footer>
 
