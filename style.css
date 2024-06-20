@@ -7,224 +7,74 @@ body {
     overflow-x: hidden;
 }
 
-.logo {
-    height: 60px;
-    margin-right: 10px;
+
+/* navbar start  */
+
+.shadow-bottom {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-left: 70px;
 }
 
 .navbar-nav .nav-link {
-    font-weight: bold;
-    font-size: 16px;
+    color: #000;
 }
 
-.badge-warning {
-    background-color: #ffa500;
-    color: #fff;
+.nav-item.dropdown .dropdown-menu {
+    background-color: #fff;
 }
 
-.profile-picture {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-}
-
-.java-span1 {
-    text-align: left;
-    font-family: "Epilogue-ExtraBold", sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    position: relative;
-}
-
-.img-responsive {
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* Media query for small screens */
-
-@media (max-width: 600px) {
-    .achieve {
-        font-size: 1em;
-        padding: 10px 5px 5px 5px;
-        gap: 5px;
-        left: 33px;
-    }
-    .java-span3 {
-        font-size: 2.5em;
-    }
-    .get-55-10-off-on-all-online-trainings {
-        font-size: 0.5em;
-    }
-    .get-55-10-off-on-all-online-trainings-span2 {
-        font-size: 0.5em;
-    }
-    .get-55-10-off-on-all-online-trainings-span3 {
-        font-size: 0.5em;
-    }
-}
-
-
-/* Media query for medium screens */
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    .achieve {
-        font-size: 1.25em;
-        padding: 15px 7px 7px 5px;
-        gap: 7px;
-        left: 48px;
-    }
-    .java-span3 {
-        font-size: 2.75em;
-    }
-    .get-55-10-off-on-all-online-trainings {
-        font-size: 0.75em;
-    }
-    .get-55-10-off-on-all-online-trainings-span2 {
-        font-size: 0.75em;
-    }
-    .get-55-10-off-on-all-online-trainings-span3 {
-        font-size: 0.75em;
-    }
-}
-
-
-/* Media query for large screens */
-
-@media (min-width: 1025px) {
-    .achieve {
-        font-size: 1.5em;
-        padding: 20px 10px 10px 5px;
-        gap: 10px;
-        left: 66px;
-    }
-    .java-span3 {
-        font-size: 3em;
-    }
-    .get-55-10-off-on-all-online-trainings {
-        font-size: 1em;
-    }
-    .get-55-10-off-on-all-online-trainings-span2 {
-        font-size: 1em;
-    }
-    .get-55-10-off-on-all-online-trainings-span3 {
-        font-size: 1em;
-    }
-}
-
-.achieve {
-    color: #fff;
-    font-family: "Epilogue-ExtraBold", sans-serif;
-    font-size: 1.5em;
-    font-weight: 600;
-    padding: 20px 10px 10px 5px;
+.contact-info {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 66px;
-    top: 94px;
 }
 
-.java-span3 {
-    color: #fff;
-    font-family: "Epilogue-ExtraBold", sans-serif;
-    font-size: 3em;
-    font-weight: 800;
-    padding: 50px 10px 10px 0px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 64px;
-    top: 94px;
+.contact-info i {
+    margin-right: 5px;
 }
 
-.frame-881 {
-    padding: 60px 10px 10px 0px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 74px;
-    top: 217px;
+
+/* hero section */
+
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    font-family: "Epilogue-Regular", sans-serif;
 }
 
-.get-55-10-off-on-all-online-trainings {
-    color: #ffffff;
-    text-align: left;
-    font-family: "-", sans-serif;
-    font-size: 1em;
-    font-weight: 400;
-    position: relative;
+.highlight {
+    color: #ff4500;
 }
 
-.get-55-10-off-on-all-online-trainings-span2 {
-    color: #ffffff;
-    font-family: "Epilogue-ExtraBold", sans-serif;
-    font-size: 1em;
-    font-weight: 800;
+.stats {
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 15px;
 }
 
-.get-55-10-off-on-all-online-trainings-span3 {
-    color: #ffffff;
-    font-family: "Epilogue-Medium", sans-serif;
-    font-size: 1em;
-    font-weight: 500;
+.stats li {
+    margin-bottom: 10px;
 }
 
-.frame-887 {
-    width: 244px;
-    height: 44px;
-    position: absolute;
-    left: 70px;
-    top: 300px;
-}
-
-.vector-8 {
-    border-radius: 0px;
-    width: 244px;
-    height: 44px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    overflow: visible;
-}
-
-.frame-886 {
+.vertical-btn {
+    position: fixed;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    background-color: #007bff;
+    color: white;
     padding: 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 3px;
-    top: calc(50% - 18px);
-}
-
-.stop-watch {
-    flex-shrink: 0;
-    width: 16px;
-    height: 16px;
-    position: relative;
-    overflow: visible;
-}
-
-._1-d-13-h-12-m-05-s {
-    color: #121212;
-    text-align: left;
-    font-family: "Epilogue-Medium", sans-serif;
-    font-size: 1em;
-    font-weight: 500;
-    position: relative;
+    border-radius: 5px;
+    z-index: 1000;
 }
 
 
@@ -306,29 +156,15 @@ body {
 
 /* counter start */
 
-.inspiring-your-aspirations {
-    color: #121212;
-    text-align: left;
-    font-family: "Epilogue-Bold", sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    position: relative;
-    border-left: 8px solid #0000ff;
-    line-height: 80px;
-    margin-right: 30px;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
 .real-success-requires-the-right-skillset-through-our-online-courses-you-too-can-give-wings-to-your-dreams {
     color: #121212;
     text-align: left;
     font-family: "Epilogue-Regular", sans-serif;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 400;
     position: relative;
-    padding: 9px;
+    padding-left: 2px;
+    padding-top: 2px;
     padding-bottom: 20px;
 }
 

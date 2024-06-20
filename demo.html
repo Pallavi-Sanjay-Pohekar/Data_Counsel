@@ -4,29 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Text on Image</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Text Changing Effect</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .text-overlay {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        .text-changing-container {
+            text-align: center;
+            padding: 50px;
+        }
+        
+        .text-changing {
+            font-size: 2rem;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
-    <div class="container mt-5">
-        <div class="position-relative">
-            <img src="Banner.png" class="img-fluid" alt="Responsive image">
-            <div class="position-absolute text-overlay">
-                <h1>Your Text Here</h1>
-                <p>Additional text can go here.</p>
-            </div>
-        </div>
+    <div class="container text-changing-container">
+        <p class="text-changing">Hello, world!</p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var texts = ["Hello, world!", "Welcome to the site!", "Enjoy your stay!", "Contact us for more info!"];
+            var index = 0;
+            var textElement = document.querySelector('.text-changing');
+
+            function changeText() {
+                textElement.innerText = texts[index];
+                index = (index + 1) % texts.length;
+            }
+
+            setInterval(changeText, 2000);
+        });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
